@@ -1,1 +1,1 @@
-# Project1
+Web ini adalah platform e-commerce sederhana yang dirancang khusus untuk pembelian mata uang dalam game (Diamond, Points, atau Pass). Platform ini menggunakan kombinasi Bootstrap untuk desain responsif dan JavaScript untuk logika dinamis pemrosesan pesanan. Dengan 3 halaman Home, Detail, dan Contack 
