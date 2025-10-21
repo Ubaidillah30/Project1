@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.css">
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, #000000 0%, #1A0033 80%, #3A0066 120%);
+            background-attachment: fixed;
+            font-family: 'Raleway', sans-serif;
+            color: #f0f4ff;
+            font-weight: 300;
+        }
+
+        .formulir{
+            background-color: #6800b7;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .image{
+            height: 50px; 
+            width: 50px;
+            object-fit: contain;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .kartu{
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .tombol{
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#"><img src="gambar/Untitled_design__1___1_-removebg-preview.png" alt="" style="height: 50px; width: 180px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="test1.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contack.html">CONTACK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <p><br></p>
+
+    <div class="container text-center">
+        <div class="row g-3">
+            <div class="col-12 col-lg-4">
+                <div class="container formulir">
+                    <p><img src="gambar/1.png" alt="" class="img-fluid" style="border-radius: 10px;" id="game-image"></p>
+                    <h5 style="font-weight: bold;" id="game-title">MOBILE LEGEND</h5>
+                    <p id="game-description">Top up Diamond ML hanya dalam hitungan detik! 
+                        Cukup masukan User ID & Server MLBB Anda, Pilih 
+                        jumlah Diamond yang Anda inginkan, Selesaikan 
+                        pembayaran Dan Diamond akan langsung masuk ke akun 
+                        Mobile Legends Anda.</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <form class="formulir text-start">
+                    <div>
+                        <p style="font-weight: bold;">INFORMASI PELANGGAN</p>
+                        <hr>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Masukkan User ID</label>
+                        <input type="number" class="form-control" id="input-user-id" aria-describedby="emailHelp" placeholder="User ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="input-whatsapp" class="form-label">Nomor WhatsApp</label>
+                        <input type="tel" class="form-control" id="input-whatsapp" placeholder="08xxxxxxxxxx">
+                    </div>
+                </form>
+                <p><br></p>
+
+                <form class="formulir text-start">
+                    <div>
+                        <p style="font-weight: bold;">HARGA</p>
+                        <hr>
+                    </div>
+                    <div class="row row-cols-2 row-cols-md-3 g-4 kartu" id="diamond-cards-container">
+                        </div>
+                </form>
+                <p><br></p>
+
+                <form class="formulir text-start">
+                    <div>
+                        <p style="font-weight: bold;">PEMBAYARAN</p>
+                        <hr>
+                    </div>
+                    <div class="row row-cols-2 row-cols-md-3 g-4" id="metode-pembayaran-container">
+                        <div class="col">
+                            <div class="card h-100 metode-bayar" data-metode="BRI" data-biaya-layanan="1000" style="cursor: pointer;">
+                              <img src="gambar/BRI.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-title">Bank Transfer</p>
+                                <p class="card-text" style="font-weight: bold;">BRI</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 metode-bayar" data-metode="BNI" data-biaya-layanan="1000" style="cursor: pointer;">
+                              <img src="gambar/BNI.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-title">Bank Transfer</p>
+                                <p class="card-text" style="font-weight: bold;">BNI</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 metode-bayar" data-metode="BCA" data-biaya-layanan="1000" style="cursor: pointer;">
+                              <img src="gambar/BCA.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-title">Bank Transfer</p>
+                                <p class="card-text" style="font-weight: bold;">BCA</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 metode-bayar" data-metode="MANDIRI" data-biaya-layanan="1000" style="cursor: pointer;">
+                              <img src="gambar/MANDIRI.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-title">Bank Transfer</p>
+                                <p class="card-text" style="font-weight: bold;">MANDIRI</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 metode-bayar" data-metode="ALFAMART" data-biaya-layanan="2500" style="cursor: pointer;">
+                              <img src="gambar/ALFAMART.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-title">Retail</p>
+                                <p class="card-text" style="font-weight: bold;">ALFAMART</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 metode-bayar" data-metode="INDOMARET" data-biaya-layanan="3000" style="cursor: pointer;">
+                              <img src="gambar/INDOMARET.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-title">Retail</p>
+                                <p class="card-text" style="font-weight: bold;">INDOMARET</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 metode-bayar" data-metode="DANA" data-biaya-layanan="1500" style="cursor: pointer;">
+                              <img src="gambar/DANA.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-title">E-Wallet</p>
+                                <p class="card-text" style="font-weight: bold;">DANA</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 metode-bayar" data-metode="SHOOPE PAY" data-biaya-layanan="800" style="cursor: pointer;">
+                              <img src="gambar/SPAY.png" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-title">E-Wallet</p>
+                                <p class="card-text" style="font-weight: bold;">SHOOPE PAY</p>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <P><br></P>
+
+                <form class="formulir text-start">
+                    <div>
+                        <p style="font-weight: bold;">KONFIRMASI PEMBAYARAN</p>
+                        <hr>
+                    </div>
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col text-start">
+                                <p>ID</p>
+                                <p>Nomor Handphone</p>
+                                <p>Paket Diamond</p>
+                                <p>Harga Item</p>
+                                <p>Biaya Layanan</p> <p>Metode Pembayaran</p>
+                                <p style="font-weight: bold;">Total Pembayaran</p>
+                            </div>
+                            <div class="col text-end">
+                                <p id="display-id">ID belum diisi</p> 
+                                <p id="display-phone">Nomor belum diisi</p> 
+                                <p id="display-paket">- Belum Dipilih -</p> 
+                                <p id="display-harga">Rp 0</p> 
+                                <p id="display-biaya-layanan">Rp 0</p> <p id="display-metode">Belum Dipilih</p> 
+                                <p style="font-weight: bold;" id="display-total-pembayaran">Rp 0</p>
+                            </div>
+                        </div>
+                        <button class="tombol">Pesan Sekarang</button>
+                    </div>
+                </form>
+                <p><br></p>
+            </div>
+        </div> 
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-white" style="background-color: #6800b7;">
+            <div class="modal-header border-bottom border-secondary">
+              <h5 class="modal-title" id="successModalLabel">Pesanan Berhasil!</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <i class="fa-solid fa-circle-check fa-4x mb-3 text-success"></i>
+              <p>Pesanan Anda telah berhasil dikonfirmasi</p>
+            </div>
+            <div class="modal-footer border-top border-secondary">
+              <button type="button" class="btn bg-light w-100" data-bs-dismiss="modal">Oke, Pesan Lagi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="data_game.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const gameId = localStorage.getItem('gamePilihan');
+            
+            if (!gameId || !dataProduk[gameId]) {
+                alert('Silakan pilih game terlebih dahulu!');
+                window.location.href = 'project.html'; 
+                return;
+            }
+            
+            const gameData = dataProduk[gameId];
+            
+            document.getElementById('game-title').textContent = gameData.nama;
+            document.getElementById('game-image').src = gameData.gambar;
+            document.getElementById('game-description').textContent = gameData.deskripsi;
+            
+            const container = document.getElementById('diamond-cards-container');
+            container.innerHTML = '';
+
+            const diamondImagePath = gameData.diamond_image; 
+
+            gameData.diamond.forEach((paket) => {
+                // Format harga ke Rupiah
+                const hargaRupiah = paket.harga.toLocaleString('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    minimumFractionDigits: 0
+                });
+
+                const col = document.createElement('div');
+                col.classList.add('col');
+
+                col.innerHTML = `
+                    <div class="card h-100 kartu" style="cursor: pointer;" 
+                        data-jumlah-text="${paket.total}" 
+                        data-harga="${paket.harga}">
+                        
+                        <img src="${diamondImagePath}" class="card-img-top image" alt="Diamond">
+                        
+                        <div class="card-body">
+                            <p class="card-title">${paket.total}</p>
+                            <p class="card-text"><strong>${hargaRupiah}</strong></p>
+                        </div>
+                    </div>
+                `;
+                
+                // memilih paket 
+                const cardElement = col.querySelector('.card');
+                cardElement.addEventListener('click', function() {
+
+                    document.querySelectorAll('#diamond-cards-container .card').forEach(c => c.classList.remove('border-danger', 'border-5'));
+                    
+                    this.classList.add('border-danger', 'border-5');
+
+                    localStorage.setItem('paketTerpilih', JSON.stringify({
+                        jumlahText: this.getAttribute('data-jumlah-text'),
+                        harga: parseInt(this.getAttribute('data-harga'))
+                    }));
+                    
+                    updateKonfirmasiPembayaran();
+                });
+
+                container.appendChild(col);
+            });
+            
+            // memilih Metode Pembayaran
+            document.querySelectorAll('.metode-bayar').forEach(card => {
+                card.addEventListener('click', function() {
+ 
+                    document.querySelectorAll('#metode-pembayaran-container .metode-bayar').forEach(c => c.classList.remove('border-danger', 'border-5'));
+
+                    this.classList.add('border-danger', 'border-5');
+
+                    localStorage.setItem('metodeBayarTerpilih', JSON.stringify({
+                        nama: this.getAttribute('data-metode'),
+                        biaya: parseInt(this.getAttribute('data-biaya-layanan')) // Ambil biaya layanan
+                    }));
+                    
+                    updateKonfirmasiPembayaran();
+                });
+            });
+
+            updateKonfirmasiPembayaran();
+        });
+
+
+        // Fungsi untuk mengupdate bagian Konfirmasi Pembayaran
+        function updateKonfirmasiPembayaran() {
+            const paketTerpilihString = localStorage.getItem('paketTerpilih');
+            const metodeBayarString = localStorage.getItem('metodeBayarTerpilih'); 
+
+            const paketTerpilih = paketTerpilihString ? JSON.parse(paketTerpilihString) : null;
+
+            const metodeBayarObj = metodeBayarString ? JSON.parse(metodeBayarString) : null;
+            
+            const biayaLayanan = metodeBayarObj ? metodeBayarObj.biaya : 0;
+            const namaMetode = metodeBayarObj ? metodeBayarObj.nama : 'Belum Dipilih';
+
+            
+            // Ambil elemen di bagian Konfirmasi Pembayaran
+            const priceDisplay = document.getElementById('display-harga');
+            const totalDisplay = document.getElementById('display-total-pembayaran');
+            const paketDisplay = document.getElementById('display-paket');
+            const metodeDisplay = document.getElementById('display-metode');
+            const biayaLayananDisplay = document.getElementById('display-biaya-layanan'); // Ini perlu ditambahkan di HTML
+
+            // Update Metode Pembayaran
+            metodeDisplay.textContent = namaMetode;
+            
+            // Format biaya layanan ke Rupiah
+            const biayaLayananRupiah = biayaLayanan.toLocaleString('id-ID', { 
+                style: 'currency', 
+                currency: 'IDR', 
+                minimumFractionDigits: 0 
+            });
+
+            if (document.getElementById('display-biaya-layanan')) {
+                document.getElementById('display-biaya-layanan').textContent = biayaLayananRupiah;
+            }
+
+
+            if (paketTerpilih) {
+                const harga = paketTerpilih.harga;
+                const total = harga + biayaLayanan; 
+
+                priceDisplay.textContent = harga.toLocaleString('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 });
+                totalDisplay.textContent = total.toLocaleString('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 });
+                paketDisplay.textContent = paketTerpilih.jumlahText;
+            } else {
+                priceDisplay.textContent = 'Rp 0';
+                totalDisplay.textContent = 'Rp 0';
+                paketDisplay.textContent = '- Belum Dipilih -';
+            }
+
+            const userID = document.getElementById('input-user-id').value;
+            const phone = document.getElementById('input-whatsapp').value;
+            
+            document.getElementById('display-id').textContent = userID || 'ID belum diisi';
+            document.getElementById('display-phone').textContent = phone || 'Nomor belum diisi';
+
+        }
+        
+        document.getElementById('input-user-id').addEventListener('input', updateKonfirmasiPembayaran);
+        document.getElementById('input-whatsapp').addEventListener('input', updateKonfirmasiPembayaran);
+
+        
+        function resetKonfirmasiPembayaran() {
+             // Menghapus data dari localStorage
+            localStorage.removeItem('paketTerpilih');
+            localStorage.removeItem('metodeBayarTerpilih');
+
+            // Mereset nilai input pelanggan
+            document.getElementById('input-user-id').value = '';
+            document.getElementById('input-whatsapp').value = '';
+            
+            // Menghapus highlight dari semua kartu Diamond
+            document.querySelectorAll('#diamond-cards-container .card').forEach(c => c.classList.remove('border-danger', 'border-5'));
+
+            // Menghapus highlight dari semua kartu Metode Pembayaran
+            document.querySelectorAll('#metode-pembayaran-container .metode-bayar').forEach(c => c.classList.remove('border-danger', 'border-5'));
+
+            // Memuat ulang tampilan konfirmasi pembayaran
+            updateKonfirmasiPembayaran();
+        }
+
+        document.querySelector('.tombol').addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+            const userID = document.getElementById('input-user-id').value;
+            const phone = document.getElementById('input-whatsapp').value;
+            const paketTerpilihString = localStorage.getItem('paketTerpilih');
+            const metodeBayar = localStorage.getItem('metodeBayarTerpilih');
+
+            if (!userID || !phone || !paketTerpilihString || !metodeBayar) {
+                alert('Mohon lengkapi User ID, Nomor WhatsApp, Paket Diamond, dan Metode Pembayaran sebelum memesan!');
+                return;
+            }
+
+            resetKonfirmasiPembayaran();
+
+            const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+            successModal.show();
+        });
+    </script>
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
